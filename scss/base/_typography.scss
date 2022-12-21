@@ -1,0 +1,48 @@
+@use 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+@mixin text-style($size, $weight, $line-height, $color) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  color: $color;
+}
+
+$heading-1: clamp(2rem, calc(1.48rem + 2.61vw), 3.5rem);
+$heading-2: clamp(1.5rem, calc(1.04rem + 2.28vw), 2.81rem);
+$paragraph: clamp(0.88rem, calc(0.79rem + 0.43vw), 1.13rem);
+$link: clamp(0.88rem, calc(0.83rem + 0.22vw), 1rem);
+
+h1,
+h2,
+h3,
+span {
+  font-family: 'Dela Gothic One', cursive;
+}
+
+p,
+a,
+button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  @include text-style($heading-1, normal, 1.3em, colors.$primary-black);
+}
+
+h2 {
+  @include text-style($heading-2, normal, 1em, colors.$primary-black);
+}
+
+p {
+  @include text-style($paragraph, 600, 1.5em, colors.$primary-text);
+}
+
+a {
+  @include text-style($paragraph, 600, 1.5em, colors.$primary-text);
+}
+
+button {
+  @include text-style($paragraph, bolder, 1.5em, colors.$primary-text);
+}
