@@ -2,13 +2,31 @@
 @use '../abstract/mixin' as mixin;
 
 nav {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
   background-color: colors.$primary-grey;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   .container {
-    width: min(90%, 1200px);
+    width: min(85%, 1200px);
     padding: 1.5em 0;
     margin: 0 auto;
     @include mixin.flex-box;
+    .bar {
+      display: none;
+      width: 2em;
+      height: 2em;
+    }
+    i {
+      font-size: 12px;
+      font-weight: bolder;
+    }
+    .bar {
+      i {
+        font-size: 25px;
+        cursor: pointer;
+      }
+    }
     .links {
       @include mixin.flex-box;
       gap: 20%;
@@ -16,6 +34,7 @@ nav {
         font-size: 21px;
       }
       .menu {
+        position: relative;
         @include mixin.flex-box;
         gap: 10%;
         a {
@@ -23,6 +42,29 @@ nav {
         }
         a:hover {
           color: colors.$primary-black;
+        }
+        .dropdown-btn {
+          @include mixin.flex-box;
+          gap: 10%;
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: white;
+          padding: 1em 2em;
+          border-radius: 12px;
+          bottom: -100px;
+          right: -150px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+          li {
+            padding: 0.3em 0;
+          }
+          a {
+            font-size: 16px;
+          }
+        }
+        .dropdown:hover .dropdown-content {
+          display: block;
         }
       }
     }
@@ -35,13 +77,14 @@ nav {
           @include mixin.flex-box;
           width: 2.2em;
           height: 2.2em;
-          margin-right: 0.7em;
+          margin-right: 0.5em;
           background-color: colors.$telor-asin-bright;
           border-radius: 100%;
           .initial-name {
             margin: auto;
             color: colors.$telor-asin-dark;
             font-weight: bolder;
+            cursor: pointer;
           }
         }
       }
@@ -49,5 +92,57 @@ nav {
         color: colors.$primary-black;
       }
     }
+  }
+}
+
+.menu-mobile {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: none;
+  ul {
+    position: absolute;
+    top: 25%;
+    @include mixin.flex-box(space-evenly, center);
+    background-color: white;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    a:hover {
+      color: colors.$telor-asin-lighter;
+    }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  nav {
+    .container {
+      .bar {
+        display: block;
+      }
+      .links {
+        .menu {
+          display: none;
+        }
+      }
+    }
+  }
+  .user-account {
+    .user-info {
+      .user-name {
+        display: none;
+      }
+    }
+    button {
+      display: none;
+    }
+  }
+  .menu-mobile {
+    display: block;
   }
 }

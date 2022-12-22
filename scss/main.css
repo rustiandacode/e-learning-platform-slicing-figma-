@@ -65,16 +65,32 @@ button {
 }
 
 nav {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
   background-color: #f6f5f4;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 nav .container {
-  width: min(90%, 1200px);
+  width: min(85%, 1200px);
   padding: 1.5em 0;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+nav .container .bar {
+  display: none;
+  width: 2em;
+  height: 2em;
+}
+nav .container i {
+  font-size: 12px;
+  font-weight: bolder;
+}
+nav .container .bar i {
+  font-size: 25px;
+  cursor: pointer;
 }
 nav .container .links {
   display: flex;
@@ -86,6 +102,7 @@ nav .container .links span {
   font-size: 21px;
 }
 nav .container .links .menu {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,6 +113,31 @@ nav .container .links .menu a {
 }
 nav .container .links .menu a:hover {
   color: #000000;
+}
+nav .container .links .menu .dropdown-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+}
+nav .container .links .menu .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 1em 2em;
+  border-radius: 12px;
+  bottom: -100px;
+  right: -150px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+nav .container .links .menu .dropdown-content li {
+  padding: 0.3em 0;
+}
+nav .container .links .menu .dropdown-content a {
+  font-size: 16px;
+}
+nav .container .links .menu .dropdown:hover .dropdown-content {
+  display: block;
 }
 nav .container .user-account {
   display: flex;
@@ -114,7 +156,7 @@ nav .container .user-account .user-info .profile {
   align-items: center;
   width: 2.2em;
   height: 2.2em;
-  margin-right: 0.7em;
+  margin-right: 0.5em;
   background-color: #c3dce3;
   border-radius: 100%;
 }
@@ -122,7 +164,52 @@ nav .container .user-account .user-info .profile .initial-name {
   margin: auto;
   color: #2b788b;
   font-weight: bolder;
+  cursor: pointer;
 }
 nav .container .user-account button {
   color: #000000;
+}
+
+.menu-mobile {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: none;
+}
+.menu-mobile ul {
+  position: absolute;
+  top: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+}
+.menu-mobile ul a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.menu-mobile ul a:hover {
+  color: #c3dce3;
+}
+
+@media only screen and (max-width: 780px) {
+  nav .container .bar {
+    display: block;
+  }
+  nav .container .links .menu {
+    display: none;
+  }
+  .user-account .user-info .user-name {
+    display: none;
+  }
+  .user-account button {
+    display: none;
+  }
+  .menu-mobile {
+    display: block;
+  }
 }/*# sourceMappingURL=main.css.map */
