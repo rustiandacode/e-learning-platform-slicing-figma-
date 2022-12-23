@@ -22,8 +22,12 @@ nav {
       font-weight: bolder;
     }
     .bar {
-      i {
+      .fa-bars-staggered {
         font-size: 25px;
+        cursor: pointer;
+      }
+      .fa-xmark {
+        font-size: 30px;
         cursor: pointer;
       }
     }
@@ -114,7 +118,7 @@ nav {
       font-weight: bold;
     }
     a:hover {
-      color: colors.$telor-asin-lighter;
+      color: colors.$telor-asin-dark;
     }
   }
 }

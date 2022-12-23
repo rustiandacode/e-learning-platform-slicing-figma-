@@ -1,4 +1,4 @@
-// toggle menu on mobile screen
+// toggle button on mobile screen
 
 function navmenu() {
   let bar = document.querySelector('.bar');

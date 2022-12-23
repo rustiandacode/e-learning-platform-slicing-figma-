@@ -88,8 +88,12 @@ nav .container i {
   font-size: 12px;
   font-weight: bolder;
 }
-nav .container .bar i {
+nav .container .bar .fa-bars-staggered {
   font-size: 25px;
+  cursor: pointer;
+}
+nav .container .bar .fa-xmark {
+  font-size: 30px;
   cursor: pointer;
 }
 nav .container .links {
@@ -193,7 +197,7 @@ nav .container .user-account button {
   font-weight: bold;
 }
 .menu-mobile ul a:hover {
-  color: #c3dce3;
+  color: #2b788b;
 }
 
 @media only screen and (max-width: 780px) {

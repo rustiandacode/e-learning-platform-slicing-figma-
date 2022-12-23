@@ -1,4 +1,9 @@
+// base
 @use 'base/reset';
 @use 'base/typography';
 
+// components
 @use 'component/navbar';
+
+// layouts
+@use 'layouts/hero';
