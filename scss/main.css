@@ -313,6 +313,13 @@ footer .container .links .owner {
   border-radius: 1.5em;
 }
 
+.btn-telor-asin-oposite {
+  color: #c3dce3;
+  background-color: #2b788b;
+  padding: 0.7em 1.5em;
+  border-radius: 1.5em;
+}
+
 .hero {
   padding: 2em 0 2em 0;
   background-color: #f6f5f4;
