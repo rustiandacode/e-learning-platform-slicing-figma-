@@ -1,0 +1,9 @@
+@use '../base/colors' as colors;
+@use '../abstract/mixin' as mixin;
+
+.btn-telor-asin {
+  color: colors.$telor-asin-dark;
+  background-color: colors.$telor-asin-bright;
+  padding: 0.7em 1.5em;
+  border-radius: 1.5em;
+}

@@ -4,6 +4,9 @@
 
 // components
 @use 'component/navbar';
+@use 'component/button';
 
 // layouts
 @use 'layouts/hero';
+@use 'layouts/feature';
+@use 'layouts/feature2';

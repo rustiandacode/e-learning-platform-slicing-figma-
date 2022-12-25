@@ -1,17 +1,89 @@
-// @use '../base/colors' as colors;
-// @use '../abstract/mixin' as mixin;
+@use '../base/colors' as colors;
+@use '../abstract/mixin' as mixin;
 
-// .hero {
-//   padding: 7em 0 2em 0;
-//   background-color: colors.$primary-grey;
-//   .container {
-//     width: min(85%, 1200px);
-//     margin: 0 auto;
-//     .hero-content {
-//       p,
-//       h1 {
-//         margin-bottom: 2rem;
-//       }
-//     }
-//   }
-// }
+.hero {
+  padding: 2em 0 2em 0;
+  background-color: colors.$primary-grey;
+  overflow-x: hidden;
+  .container {
+    width: min(85%, 1100px);
+    margin: 0 auto;
+    @include mixin.flex-box;
+    gap: 10px;
+    .hero-content {
+      width: 50%;
+      z-index: 1;
+      .small-header {
+        color: colors.$telor-asin-dark;
+      }
+      .hero-description {
+        max-width: 400px;
+      }
+      p,
+      h1 {
+        margin-bottom: 1.8rem;
+      }
+    }
+    .hero-image {
+      width: 50%;
+      img {
+        margin-left: -120px;
+        margin-top: 130px;
+      }
+    }
+    .desc {
+      margin-top: 2rem;
+      @include mixin.flex-box(start, center);
+      gap: 10%;
+      .desc-1,
+      .desc-2 {
+        p {
+          text-align: center;
+        }
+      }
+      .content-align {
+        @include mixin.flex-box;
+        span {
+          color: colors.$telor-asin-dark;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .hero {
+    .container {
+      flex-direction: column;
+      .hero-content,
+      .hero-image {
+        width: 100%;
+      }
+      .hero-content {
+        padding-top: 5em;
+        margin-bottom: 2em;
+        text-align: center;
+        p,
+        h1 {
+          margin-bottom: 0.5rem;
+        }
+        .hero-description {
+          margin: 1rem auto;
+        }
+        .desc {
+          justify-content: space-around;
+          .content-align {
+            justify-content: start;
+            margin-bottom: 0.3em;
+          }
+        }
+      }
+      .hero-image {
+        img {
+          width: 100vw;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

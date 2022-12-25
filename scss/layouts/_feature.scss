@@ -1,0 +1,66 @@
+@use '../base/colors' as colors;
+@use '../abstract/mixin' as mixin;
+
+.feature {
+  padding: 4em 0;
+  overflow-x: hidden;
+  .container {
+    width: min(85%, 1200px);
+    margin: 0 auto;
+    @include mixin.flex-box(center, center);
+    .feature-content,
+    .feature-image {
+      width: 50%;
+    }
+    .feature-image {
+      img {
+        margin-left: 3em;
+      }
+    }
+    .feature-content {
+      h2 {
+        max-width: 500px;
+        margin-bottom: 1.8rem;
+      }
+      p {
+        max-width: 400px;
+        margin-bottom: 1.8rem;
+      }
+      .feature-apps {
+        @include mixin.flex-box(start, center);
+      }
+      img {
+        cursor: pointer;
+      }
+      .sprint {
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .feature {
+    .container {
+      flex-direction: column;
+      row-gap: 2em;
+      .feature-image,
+      .feature-content {
+        width: 100%;
+      }
+      .feature-image {
+        text-align: center;
+        img {
+          width: 80vw;
+          margin: auto;
+        }
+      }
+      .feature-content {
+        text-align: center;
+        .feature-apps {
+          @include mixin.flex-box(center, center);
+        }
+      }
+    }
+  }
+}
