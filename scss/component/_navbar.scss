@@ -74,8 +74,9 @@ nav {
     }
     .btn-telor-asin-oposite {
       @include mixin.flex-box;
+
       p {
-        color: colors.$telor-asin-dark;
+        color: colors.$telor-asin-bright;
         margin-right: 0.5em;
       }
     }
