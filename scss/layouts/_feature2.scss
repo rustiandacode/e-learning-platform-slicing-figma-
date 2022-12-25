@@ -4,6 +4,7 @@
 .feature-2 {
   background-color: colors.$primary-grey;
   overflow-x: hidden;
+  overflow-y: hidden;
   .container {
     padding-top: 4em;
     width: min(85%, 1200px);
