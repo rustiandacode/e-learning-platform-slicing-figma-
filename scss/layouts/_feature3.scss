@@ -1,0 +1,58 @@
+@use '../base/colors' as colors;
+@use '../abstract/mixin' as mixin;
+
+.feature-3 {
+  padding: 4em 0;
+  overflow-x: hidden;
+  .container {
+    padding: 4em 0;
+    width: min(85%, 1200px);
+    margin: 0 auto;
+    @include mixin.flex-box(center, center);
+    gap: 8%;
+    .feature-content,
+    .feature-image {
+      width: 50%;
+    }
+
+    .feature-content {
+      h2 {
+        max-width: 500px;
+        margin-bottom: 1.8rem;
+      }
+      p {
+        max-width: 400px;
+        margin-bottom: 1.8rem;
+      }
+      .feature-apps {
+        @include mixin.flex-box(start, center);
+      }
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .feature-3 {
+    .container {
+      flex-direction: column;
+      row-gap: 2em;
+      .feature-image,
+      .feature-content {
+        width: 100%;
+      }
+      .feature-image {
+        text-align: center;
+        img {
+          width: 80vw;
+          margin-left: 2em;
+        }
+      }
+      .feature-content {
+        text-align: center;
+      }
+    }
+  }
+}

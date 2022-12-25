@@ -443,4 +443,58 @@ nav .container .user-account button {
   .feature-2 .container .feature-content .center-content {
     margin-left: 0;
   }
+}
+.feature-3 {
+  padding: 4em 0;
+  overflow-x: hidden;
+}
+.feature-3 .container {
+  padding: 4em 0;
+  width: min(85%, 1200px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8%;
+}
+.feature-3 .container .feature-content,
+.feature-3 .container .feature-image {
+  width: 50%;
+}
+.feature-3 .container .feature-content h2 {
+  max-width: 500px;
+  margin-bottom: 1.8rem;
+}
+.feature-3 .container .feature-content p {
+  max-width: 400px;
+  margin-bottom: 1.8rem;
+}
+.feature-3 .container .feature-content .feature-apps {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.feature-3 .container .feature-content img {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 780px) {
+  .feature-3 .container {
+    flex-direction: column;
+    row-gap: 2em;
+  }
+  .feature-3 .container .feature-image,
+.feature-3 .container .feature-content {
+    width: 100%;
+  }
+  .feature-3 .container .feature-image {
+    text-align: center;
+  }
+  .feature-3 .container .feature-image img {
+    width: 80vw;
+    margin-left: 2em;
+  }
+  .feature-3 .container .feature-content {
+    text-align: center;
+  }
 }/*# sourceMappingURL=main.css.map */
