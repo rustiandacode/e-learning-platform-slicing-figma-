@@ -4,12 +4,12 @@
 footer {
   background-color: colors.$primary-grey;
   .container {
-    padding: 1em 0;
+    padding: 2em;
     width: min(85%, 1200px);
     margin: auto;
     .links {
       @include mixin.flex-box;
-      padding: 1em;
+      padding-bottom: 2em;
       border-bottom: solid 1px rgb(202, 202, 202);
       .menu-links,
       .owner {
@@ -24,7 +24,7 @@ footer {
     }
     .copyright {
       @include mixin.flex-box;
-      padding: 1em;
+      padding: 2em 0 1em 0;
       .icon {
         img {
           padding-right: 1em;

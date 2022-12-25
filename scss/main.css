@@ -231,7 +231,7 @@ footer {
   background-color: #f6f5f4;
 }
 footer .container {
-  padding: 1em 0;
+  padding: 2em;
   width: min(85%, 1200px);
   margin: auto;
 }
@@ -239,7 +239,7 @@ footer .container .links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding-bottom: 2em;
   border-bottom: solid 1px rgb(202, 202, 202);
 }
 footer .container .links .menu-links,
@@ -259,7 +259,7 @@ footer .container .copyright {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding: 2em 0 1em 0;
 }
 footer .container .copyright .icon img {
   padding-right: 1em;
