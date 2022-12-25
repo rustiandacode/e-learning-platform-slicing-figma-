@@ -72,7 +72,7 @@ nav {
         }
       }
     }
-    .btn-telor-asin {
+    .btn-telor-asin-oposite {
       @include mixin.flex-box;
       p {
         color: colors.$telor-asin-dark;
@@ -146,7 +146,7 @@ nav {
       }
     }
   }
-  .btn-telor-asin {
+  .btn-telor-asin-oposite {
     @include mixin.flex-box;
     p {
       display: none;

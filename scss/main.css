@@ -150,12 +150,12 @@ nav .container .links .menu .dropdown-content a {
 nav .container .links .menu .dropdown:hover .dropdown-content {
   display: block;
 }
-nav .container .btn-telor-asin {
+nav .container .btn-telor-asin-oposite {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-nav .container .btn-telor-asin p {
+nav .container .btn-telor-asin-oposite p {
   color: #2b788b;
   margin-right: 0.5em;
 }
@@ -226,12 +226,12 @@ nav .container .user-account button {
   nav .container .links .menu {
     display: none;
   }
-  .btn-telor-asin {
+  .btn-telor-asin-oposite {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .btn-telor-asin p {
+  .btn-telor-asin-oposite p {
     display: none;
   }
   .user-account .user-info .user-name {
