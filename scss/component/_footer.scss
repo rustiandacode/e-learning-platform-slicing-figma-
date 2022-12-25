@@ -1,0 +1,64 @@
+@use '../base/colors' as colors;
+@use '../abstract/mixin' as mixin;
+
+footer {
+  background-color: colors.$primary-grey;
+  .container {
+    padding: 1em 0;
+    width: min(85%, 1200px);
+    margin: auto;
+    .links {
+      @include mixin.flex-box;
+      padding: 1em;
+      border-bottom: solid 1px rgb(202, 202, 202);
+      .menu-links,
+      .owner {
+        @include mixin.flex-box;
+        gap: 2em;
+        a {
+          text-decoration: none;
+          color: colors.$footer-text;
+          font-size: cclamp(0.75rem, calc(0.71rem + 0.22vw), 0.88rem);
+        }
+      }
+    }
+    .copyright {
+      @include mixin.flex-box;
+      padding: 1em;
+      .icon {
+        img {
+          padding-right: 1em;
+        }
+      }
+      .copyright-text {
+        p {
+          font-size: clamp(0.75rem, calc(0.71rem + 0.22vw), 0.88rem);
+          color: colors.$footer-text;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  footer {
+    padding: 0.2em 0;
+    .container {
+      .copyright {
+        flex-direction: column;
+        gap: 1em;
+      }
+      .links {
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 30%;
+        .menu-links,
+        .owner {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5em;
+        }
+      }
+    }
+  }
+}

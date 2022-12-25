@@ -2,9 +2,8 @@
 @use '../abstract/mixin' as mixin;
 
 .feature-3 {
-  padding: 4em 0;
-  overflow-x: hidden;
   .container {
+    overflow-x: hidden;
     padding: 4em 0;
     width: min(85%, 1200px);
     margin: 0 auto;
@@ -47,7 +46,6 @@
         text-align: center;
         img {
           width: 80vw;
-          margin-left: 2em;
         }
       }
       .feature-content {
