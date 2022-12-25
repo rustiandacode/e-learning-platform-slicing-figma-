@@ -448,7 +448,6 @@ footer .container .links .owner {
 .feature-2 {
   background-color: #f6f5f4;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 .feature-2 .container {
   padding-top: 4em;
@@ -466,6 +465,7 @@ footer .container .links .owner {
 }
 .feature-2 .container .feature-image {
   width: 50%;
+  overflow-y: hidden;
 }
 .feature-2 .container .feature-image img {
   width: 80%;
