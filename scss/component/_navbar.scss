@@ -72,6 +72,13 @@ nav {
         }
       }
     }
+    .btn-telor-asin {
+      @include mixin.flex-box;
+      p {
+        color: colors.$telor-asin-dark;
+        margin-right: 0.5em;
+      }
+    }
     .user-account {
       @include mixin.flex-box;
       gap: 20px;
@@ -137,6 +144,12 @@ nav {
           display: none;
         }
       }
+    }
+  }
+  .btn-telor-asin {
+    @include mixin.flex-box;
+    p {
+      display: none;
     }
   }
   .user-account {

@@ -150,6 +150,15 @@ nav .container .links .menu .dropdown-content a {
 nav .container .links .menu .dropdown:hover .dropdown-content {
   display: block;
 }
+nav .container .btn-telor-asin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .container .btn-telor-asin p {
+  color: #2b788b;
+  margin-right: 0.5em;
+}
 nav .container .user-account {
   display: flex;
   justify-content: space-between;
@@ -215,6 +224,14 @@ nav .container .user-account button {
     display: block;
   }
   nav .container .links .menu {
+    display: none;
+  }
+  .btn-telor-asin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btn-telor-asin p {
     display: none;
   }
   .user-account .user-info .user-name {
@@ -504,7 +521,7 @@ footer .container .links .owner {
   }
   .feature-2 .container .feature-image img {
     width: 80vw;
-    margin-bottom: -1em;
+    margin-bottom: -0.5em;
   }
   .feature-2 .container .feature-content {
     text-align: center;
